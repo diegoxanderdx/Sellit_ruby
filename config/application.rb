@@ -25,6 +25,9 @@ module Appventas
     # lenguage by default
     config.i18n.default_locale = :es
 
+    #allows multiquery
+    config.active_record.async_query_executor = :global_thread_pool
+
     #foreign keys
     config.active_record.verify_foreign_keys_for_fixtures = false
   end
