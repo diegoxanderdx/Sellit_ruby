@@ -18,6 +18,14 @@ module Appventas
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+    # available languages
+    config.i18n.available_locales = [:en, :es]
+
+    # lenguage by default
+    config.i18n.default_locale = :es
+
+    #foreign keys
     config.active_record.verify_foreign_keys_for_fixtures = false
   end
 end
