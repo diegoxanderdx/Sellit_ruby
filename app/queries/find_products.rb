@@ -11,6 +11,8 @@ class FindProducts
     scoped = filter_by_min_price(scoped, params[:min_price])
     scoped = filter_by_max_price(scoped, params[:max_price])
     scoped = filter_by_query_text(scoped, params[:query_text])
+    scoped = filter_by_user_id(scoped, params[:user_id])
+    scoped = filter_by_favorites(scoped, params[:favorites])
     sort(scoped, params[:order_by])
   end
 
@@ -42,6 +44,18 @@ class FindProducts
     return scoped unless query_text.present?
 
     scoped.search_full_text(query_text)
+  end
+
+  def filter_by_user_id(scoped, user_id)
+    return scoped unless user_id.present?
+
+    scoped.where(user_id: user_id)
+  end
+
+  def filter_by_favorites(scoped, favorites)
+    return scoped unless favorites.present?
+
+    scoped.joins(:favorites).where({ favorites: { user_id: Current.user.id}})
   end
 
   def sort(scoped, order_by)
