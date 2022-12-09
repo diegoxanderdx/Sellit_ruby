@@ -1,1 +1,3 @@
-It stills in progress
+# README
+
+This is a course project, stills in progress
