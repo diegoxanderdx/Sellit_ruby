@@ -1,0 +1,8 @@
+<%= link_to t('.add'), new_product_path, class: "mx-2 text-orange-500 font-bold" if Current.user %>
+<%= link_to t('.favorites'), favorites_path, class: "mx-2 text-orange-500 font-bold" if Current.user %>
+<%= link_to t('.login'), new_session_path, class: "mx-2 text-orange-500 p-2 border-2 border-orange-500 rounded-md font-bold hover:text-white hover:bg-orange-500" unless Current.user%>
+<%= link_to t('.register'), new_user_path, class: "bg-blue-900 mx-2 text-white p-2 font-bold border-2 border-blue-900 rounded-md" unless Current.user%>
+<%= link_to t('.logout'), session_path(Current.user.id), data: {
+  turbo_method: :delete,
+  turbo_confirm: t('common.confirm')
+}, class: "bg-blue-900 mx-2 font-bold text-white mx-2 p-2 rounded-md" if Current.user %>
