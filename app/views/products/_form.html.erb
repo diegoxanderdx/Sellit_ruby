@@ -6,29 +6,25 @@
   <% end %>
 
   <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: t(".title_placeholder"), class: "rounded-md border-orange-500 mb-4 w-full placeholder-orange-500 text-orange-500" %>
   </div>
 
   <div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, placeholder: t(".description_placeholder"), class: "rounded-md border-blue-900 mb-4 w-full placeholder-blue-900 text-blue-900", rows: 5 %>
   </div>
 
   <div>
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, placeholder: t(".price_placeholder"), class: "rounded-md border-blue-900 mb-4 w-full placeholder-blue-900 text-blue-900" %>
   </div>
 
   <div>
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, { prompt: t(".category_placeholder") }, { class: "rounded-md border-blue-900 mb-4 w-full text-blue-900 placeholder-blue-900"} %>
   </div>
 
-  <div>
+  <div class="rounded-md mb-4 w-full border-[1px] p-2 text-blue-900 ">
     <%= form.label :photo %>
     <%= form.file_field :photo %>
   </div>
 
-  <%= form.submit %>
+  <%= form.submit t('.submit'), class: "px-4 py-2 font-semibold text-sm bg-orange-500 text-white rounded-md cursor-pointer shadow-sm" %>
 <% end %>

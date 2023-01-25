@@ -1,5 +1,5 @@
 en:
-  app_name: 'Sell IT'
+  app_name: 'SellIT'
   meta_title: 'Buy and sell second hand products!'
   activerecord:
     models:
@@ -22,7 +22,7 @@ en:
     confirm: 'Are you sure?'
     back: 'Go back'
     not_logged_in: 'You have to login or create an account'
-    not_authorized: 'You do not have permissions for this action'
+    not_authorized: 'You don not have permissions for this action'
     not_found: 'Not found'
   shared:
     header:
@@ -36,22 +36,28 @@ en:
       create:
         created: 'Your account has been created!'
     sessions:
-        create:
-          created: 'Welcome!'
-          failed: 'Invalid login!'
-        destroy:
-          destroyed: 'Session ended. Bye!'
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
+      destroy:
+        destroyed: 'Session ended. Bye!'
   products:
     edit:
       title: 'Edit product'
     new:
       title: 'Add product'
+    form:
+      title_placeholder: 'What do you want to sell?'
+      description_placeholder: 'Could you describe your product?'
+      price_placeholder: 'For how much?'
+      category_placeholder: 'In what category could fit better?'
+      submit: 'Sell it now!'
     index:
       title: 'Products:'
       all: 'All'
       min_price: 'Min price'
       max_price: 'Max price'
-      query_text: 'Search'
+      query_text: 'What do you want to search?'
       expensive: 'Expensive first'
       cheapest: 'Cheaper first'
       newest: 'Recently added'

@@ -5,7 +5,7 @@ es:
     models:
       product: Producto
       user: Usuario
-      category: Categoria
+      category: Categoría
     attributes:
       product:
         title: 'Título'
@@ -36,22 +36,28 @@ es:
       create:
         created: 'Tu cuenta se ha creado!'
     sessions:
-        create:
-          created: 'Bienvenido!'
-          failed: 'Login inválido!'
-        destroy:
-          destroyed: 'Tu sesión ha terminado! Hasta la próxima'
+      create:
+        created: 'Bienvenido!'
+        failed: 'Login inválido!'
+      destroy:
+        destroyed: 'Tu sesión ha terminado! Hasta la próxima'
   products:
     edit:
       title: 'Editar producto'
     new:
       title: 'Añadir producto'
+    form:
+      title_placeholder: '¿Qué quieres vender?'
+      description_placeholder: '¿Puedes describir el producto?'
+      price_placeholder: '¿Cuánto cuesta?'
+      category_placeholder: '¿En qué categoría encaja mejor?'
+      submit: 'Véndelo!'
     index:
       title: 'Productos:'
       all: 'Todos'
-      min_price: 'Precio min'
-      max_price: 'Precio max'
-      query_text: 'Buscar'
+      min_price: 'Precio mínimo'
+      max_price: 'Precio máximo'
+      query_text: '¿Qué quieres buscar?'
       expensive: 'Más caros'
       cheapest: 'Más barato'
       newest: 'Añadidos recientemente'
