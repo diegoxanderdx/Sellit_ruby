@@ -1,5 +1,5 @@
 en:
-  app_name: 'SellIT'
+  app_name: 'Sell IT'
   meta_title: 'Buy and sell second hand products!'
   activerecord:
     models:
