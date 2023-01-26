@@ -13,9 +13,8 @@
   <% end %>
 
   <div class="flex overflow-auto gap-2 my-2">
-    <%= link_to t('.all'), products_path, class: " bg-white text-blue-900 px-4 py-2 rounded-md drop-shadow-md hover:text-orange-500 border hover:border-orange-500 " %>
-
-    <%= render partial: 'category', collection: @categories %>
+    <%= render(CategoryComponent.new) %>
+    <%= render(CategoryComponent.with_collection(@categories)) %>
   </div>
   <%= turbo_frame_tag :products, class: "flex flex-col m-2" do %>
     <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2 drop-shadow-lg' do %>
