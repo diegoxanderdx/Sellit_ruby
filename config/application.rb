@@ -28,6 +28,9 @@ module Appventas
     #allows multiquery
     config.active_record.async_query_executor = :global_thread_pool
 
+    # Background job
+    config.active_job.queue_adapter = :sidekiq
+
     #foreign keys
     config.active_record.verify_foreign_keys_for_fixtures = false
   end
