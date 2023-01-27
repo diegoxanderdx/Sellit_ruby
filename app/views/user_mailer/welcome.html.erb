@@ -1,3 +1,9 @@
-<p>
-  <%= t(".welcome_message", username: @username) %>
-</p>
+<div class="bg-white text-blue-900" >
+  <h1 class="font-bold p-4 text-center text-2xl">
+    <%= t(".welcome_message", username: @username) %>
+  </h1>
+  <div class="flex justify-center">
+    <p>Recuerda que somos tu mejor opcion para vender tus articuls de segunda mano por favor, visitanos en:</p>
+    <%= image_tag 'icons/logo.jpg'%>
+  </div>
+</div>

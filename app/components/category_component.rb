@@ -21,12 +21,12 @@ class CategoryComponent < ViewComponent::Base
   end
 
   def classes
-    "category text-blue-900 px-4 py-2 rounded-md drop-shadow-md border #{background}"
+    "category px-4 py-2 rounded-md drop-shadow-md border #{background}"
   end
 
   private
 
   def background
-    active? ? "bg-blue-900 text-white hover:border-blue-900" : "bg-white hover:border-blue-900 "
+    active? ? "bg-blue-900 text-white hover:border-blue-900" : "bg-white text-blue-900 hover:border-blue-900 "
   end
 end

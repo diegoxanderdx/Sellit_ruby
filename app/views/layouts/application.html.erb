@@ -18,13 +18,15 @@
   <body class="bg-white ">
     <%= render 'shared/flash' %>
     <%= render 'shared/header' %>
-    <div class= "lg:container lg:mx-auto ">
+    <div class="lg:container lg:mx-auto lg:min-h-screen">
       <%= yield %>
+      
     </div>
-    
-    <div >
+
+    <div class="lg:container lg:mx-auto relative ">
       <%= render 'shared/footer' %>
     </div>
+    
     <%= turbo_frame_tag "modal" %>
   </body>
 </html>
