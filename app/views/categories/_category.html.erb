@@ -1,8 +1,8 @@
-<div id="<%= dom_id category %>">
+<div class=" p-1 flex justify-center"id="<%= dom_id category %>">
     <%= category.name %>
-    <%= link_to t('edit'), edit_category_path(category) %>
+    <%= link_to t('edit'), edit_category_path(category), class: "mx-2 text-orange-500 p-1 border-2 border-orange-500 rounded-md font-bold hover:text-white hover:bg-orange-500" %>
     <%= link_to t('.delete'), category_path(category), data: {
       turbo_method: :delete,
       turbo_confirm: t('common.confirm')
-    } %>
+    }, class: "bg-blue-900 mx-2 font-bold text-white mx-2 p-2 rounded-md" %>
 </div>

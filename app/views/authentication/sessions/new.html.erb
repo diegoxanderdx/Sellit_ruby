@@ -1,15 +1,23 @@
-<%= form_with(url: sessions_path) do |form| %>
-  <div>
-    <%= form.label :login %>
-    <%= form.text_field :login, required: true %>
+<div class="flex flex-col sm:flex-row items-center">
+  <div class="flex sm:w-1/2 bg-white justify-center">
+    <%= image_tag 'icons/logo.jpg'%>
   </div>
 
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password, required: true %>
-  </div>
+  <div class="flex bg-white text-blue-900 p-2 sm:w-1/2 align-middle">
+    <%= form_with(url: sessions_path) do |form| %>
+      <div class="p-2 flex flex-col">
+        <%= form.label :Email %>
+        <%= form.text_field :login, required: true, class: "rounded-md border-blue-900 mb-2 w-full placeholder-blue-900 text-blue-900"%>
+      </div>
 
-  <div>
-    <%= form.submit %>
+      <div class="p-2 flex flex-col">
+        <%= form.label :password %>
+        <%= form.password_field :password, required: true, class: "rounded-md border-blue-900 mb-2 w-full placeholder-blue-900 text-blue-900" %>
+      </div>
+
+      <div class="p-2 m-2 bg-orange-500 text-center text-white font-bold rounded-md">
+        <%= form.submit "Log in"%>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

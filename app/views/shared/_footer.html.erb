@@ -1,0 +1,20 @@
+<div class="flex flex-col sm:flex-row bg-white fixed bottom-0 w-full text-gray-700 justify-evenly items-center gap-2">
+    <div class="flex items-center p-2">
+        <%= image_tag 'icons/logo.jpg', width: 120, height: 120%>
+        <p class=" ml-4 sm:visible"> 2023 diegoxanderdx,<br> Medellin-Colombia</p>
+    </div>
+
+    <div class="flex flex-col items-center p-2">
+        <h2 class="font-medium">Developer links</h2>
+        <%= link_to 'Linkedin', 'https://www.linkedin.com/in/diegoxanderdx/', target: '_blank' %>
+        <%= link_to 'Github', 'https://github.com/diegoxanderdx', target: '_blank' %>
+        <%= link_to 'Twitter', 'https://twitter.com/diegoxanderdx', target: '_blank' %>
+        <%= link_to 'Facebook', 'https://www.facebook.com/diegoxanderdx/', target: '_blank' %>
+    </div>
+
+    <div class="flex flex-col items-center p-2 ">
+        <h2 class="font-medium">Contact</h2>
+        <%= mail_to "diegoxanderdx@gmail.com", "Email me"%>
+        <%= link_to 'WhatsApp', 'https://wa.me/+573192342712', target: '_blank' %>
+    </div>
+</div>
